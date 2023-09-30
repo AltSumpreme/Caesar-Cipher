@@ -4,6 +4,7 @@ def encrypt(plain_text,shift_amt):
     crpytic_text=""
     for letter in range(len(plain_text)):
         position=alphabet.index(plain_text[letter])
+        shift_amt%=26
         new_position= position+shift_amt
         crpytic_text+= alphabet[new_position]
     return crpytic_text
@@ -11,6 +12,7 @@ def decrypt(plain_text,shift_amt):
     decryption_text=""
     for letter in range(len(plain_text)):
         position= alphabet.index(plain_text[letter])
+        shift_amt%=26
         new_position= position-shift_amt
         decryption_text+= alphabet[new_position]
     return decryption_text
