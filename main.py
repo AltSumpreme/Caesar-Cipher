@@ -13,15 +13,19 @@ def decrypt(plain_text,shift_amt):
         position= alphabet.index(plain_text[letter])
         new_position= position-shift_amt
         decryption_text+= alphabet[new_position]
+    return decryption_text
+        
 l= input("Do you you want to encrypt or decrypt : ").lower()
 if l== "encrypt":
     p=input("the text you want to encrypt: ")
     h=int(input("The shift number: "))
     a=encrypt(p,h)
-    print(a)
+    b=a.lower()
+    print(b)
 else:
     n=input("The text you want to decrypt: ")
     h=int(input("The shift number: "))
     c= decrypt(n,h)
-    print(c)
+    d=c.lower()
+    print(d)
 
